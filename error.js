@@ -8,8 +8,15 @@ Blueprint = {
     if (this.handleError) {
       this.handleError = false
 
-      if (typeof data === 'object' && data.constructor.name === 'Error')
-        return callback(null, { message: data.message, stack: data.stack })
+      if (typeof data === 'object' && data.constructor.name === 'Error') {
+        var error = {}
+
+        Object.getOwnPropertyNames(data).forEach(function(key) {
+          error[key] = data[key]
+        })
+
+        return callback(null, error)
+      }
 
       callback(null, data)
     }
