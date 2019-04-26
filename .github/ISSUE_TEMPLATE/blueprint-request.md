@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Is your blueprint solve a problem? Please describe.**
+**Will this blueprint solve a problem? Please describe.**
 A clear and concise description of what the problem is.
 
 **Describe the solution you'd like**
